@@ -1,14 +1,14 @@
 // Список твоих 9 фото — замени на свои пути
 const photos = [
-    'mamka/photoMark/1.jpg',
-    'mamka/photoMark/2.jpg',
-    'mamka/photoMark/3.jpg',
-    'mamka/photoMark/4.jpg',
-    'mamka/photoMark/5.jpg',
-    'mamka/photoMark/6.jpg',
-    'mamka/photoMark/7.jpg',
-    'mamka/photoMark/8.jpg',
-    'mamka/photoMark/9.jpg'
+    'mamka/photoMark/1.webp',
+    'mamka/photoMark/2.webp',
+    'mamka/photoMark/3.webp',
+    'mamka/photoMark/4.webp',
+    'mamka/photoMark/5.webp',
+    'mamka/photoMark/6.webp',
+    'mamka/photoMark/7.webp',
+    'mamka/photoMark/8.webp',
+    'mamka/photoMark/9.webp'
 ];
 
 let current = 0;

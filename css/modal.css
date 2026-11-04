@@ -23,6 +23,10 @@
   visibility: visible;
 }
 
+.sasa{
+  position: relative;
+}
+
 .modal-box {
   width: 50vw;        /* 50% ширины экрана */
   height: 50vh;       /* 50% высоты экрана */
@@ -59,18 +63,19 @@
 .phone:hover { background: #1b7742; }
 
 .close {
-  margin-top: auto;
-  padding: 10px;
+  position: absolute;
+  background: none;
   border: none;
-  background: #eee;
-  border-radius: 8px;
+  border-radius: 50px;
+  color: black;
+  font-size: 25px;
+  width: fit-content;
+  padding: 10px;
+  top: 5px;
+  right: 5px;
   cursor: pointer;
-  transition: all 0.3s;
 }
 
-.close:hover{
-    background: rgb(161, 161, 161);
-}
 
 .modal-box a{
     font-size: 25px;
@@ -78,4 +83,34 @@
 
 .fa-solid, .fa-brands{
     margin-left: 20px;
+}
+
+.tg{
+  margin-top: 50px;
+}
+
+
+
+@media (max-width: 768px) {
+  .fa-solid, .fa-brands{
+    margin-left: 20px;
+  }
+
+    
+  .modal-box {
+    width: 90%;        /* 50% ширины экрана */
+    height: 50vh;       /* 50% высоты экрана */
+    max-width: 90vw;
+    max-height: 90vh;
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transform: scale(.9);
+    transition: transform .3s ease;
+  }
+
 }

@@ -840,22 +840,22 @@ html, body{
         
     }
 
-    .bottomBTN{
-        display: flex;
-        /* background-color: blue; */
-        margin: 0 30px;
-        align-items: center;
-        
-    }
+    .bottomBTN {
+    display: flex;
+    margin: 0 30px;
+    align-items: flex-end;
+    gap: 3px;
+}
 
-    .showMoreeBTN{
-        display: inline-block;
-        border: 2px solid #DEC313;
-        font-size: 15px;
-        padding: 5px 12px;
-        border-radius: 50px;
-        transition: all 0.3s;
-    }
+.showMoreeBTN {
+    display: inline-block;
+    border: 2px solid #DEC313;
+    font-size: 15px;
+    padding: 5px 12px;
+    border-radius: 50px;
+    transition: all 0.3s;
+    margin-bottom: 8px;
+}
 
 
     .uwo p, .uwoClone p{
@@ -901,7 +901,7 @@ html, body{
         width: 355px;
         font-size: 15px;
         font-weight: 600;
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
     .cardWhyWee{
@@ -913,8 +913,8 @@ html, body{
     .scred{
         background-color: #17171833;
         width: 110px;
-        height: 100px;
-        padding: 1px;
+        height: 110px;
+        padding: 10px;
     }
 
     .scred img{
@@ -924,14 +924,15 @@ html, body{
 
     .scred p{
         font-size: 10px;
-        width: 100px;
+        width: 90px;
     }
 
     .callMee{
         width: 100%;
-        padding: 0;
+        padding: 10px;
         border-radius: 50px;
     }
+    
 
     .callMeBaby{
         display: none;
@@ -943,14 +944,14 @@ html, body{
 
     .write{
         border-radius: 30px;
-        font-size: 13px;
+        font-size: 15px;
         font-weight: 600;
         padding: 10px 50px;
     }
 
     .call{
         border-radius: 30px;
-        font-size: 13px;
+        font-size: 15px;
         font-weight: 600;
         padding: 10px 50px;
     }
@@ -965,6 +966,7 @@ html, body{
     }
 
     .btns{
+        margin-top: 30px;
         display: inline-flex;
         flex-direction: column;
         gap: 5px;
