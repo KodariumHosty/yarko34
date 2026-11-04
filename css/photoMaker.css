@@ -86,3 +86,35 @@
 }
 .fullscreen.show { display: flex; }
 .fullscreen img { max-width: 95vw; max-height: 95vh; object-fit: contain; }
+
+
+
+@media (max-width: 768px) {
+    .viewer {
+        gap: 12px;
+    }
+    .main-wrap {
+        width: 100%;
+        max-width: 1200px;
+        height: 70%;
+    }
+
+    .main-wrap img.main {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 20px;
+    }
+
+    .arrow {
+        font-size: 20px;
+        color: #000000;
+        background-color: #DBDBDD;
+        border: none;
+        border-radius: 50%;
+        width: 30px; height: 30px;
+        cursor: pointer;
+        user-select: none;
+        transition: all 0.3s;
+        flex-shrink: 0;
+    }
+}

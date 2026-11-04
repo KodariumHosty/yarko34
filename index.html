@@ -5,49 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/photoMaker.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Ярко</title>
 </head>
 <body>
     <div class="naviBar">
         <img src="mamka/logo.webp" alt="">
         <div class="selfer">
-            <a href="">Каталог</a>
-            <a href="">Работы</a>
-            <a href="">Преимущества</a>
-            <a href="">Контакты</a>
+            <a href="#katalog">Каталог</a>
+            <a href="#woork">Работы</a>
+            <a href="#whyweeb">Преимущества</a>
+            <a href="#contact">Контакты</a>
         </div>
-        <a href="" style="text-decoration: none;"><button class="svaz"><p>Связаться</p><img src="mamka/telega.webp" alt=""></button></a>
+        <a onclick="openModal()" style="text-decoration: none;"><button class="svaz"><p>Связаться</p><img src="mamka/telega.webp" alt=""></button></a>
     </div>
 
+    <div class="naviPhone">
+        <img src="mamka/logo.webp" alt="">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <a onclick="openModal()" style="text-decoration: none;"><button class="svaz"><p>Связаться</p><img src="mamka/telega.webp" alt=""></button></a>
+            <button class="burger" onclick="document.getElementById('m').classList.add('open')">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+    <div id="m" onclick="if(event.target===this) this.classList.remove('open')">
+    <div class="menu">
+        <span class="x" onclick="document.getElementById('m').classList.remove('open')">✕</span>
+        <a href="#katalog">Каталог</a>
+        <a href="#woork">Работы</a>
+        <a href="#whyweeb">Преимущества</a>
+        <a href="#contact">Контакты</a>
+    </div>
+    </div>
+
+
     <div class="bannerContent">
-        <img src="mamka/banner.webp" alt="" class="bnr">
+        <img src="mamka/banner.webp" alt="" class="bnr" id="pcc">
+        <img src="mamka/bannerPhone.webp" alt="" class="bnr" id="siphone">
         <div class="gorood">г. Волгоград</div>
         <div class="contentBoxBanner">
             <h1>Современные световые решения <h1 style="color: #DEC313;">для потолков и стен</h1></h1>
             <p class="miniPeka">Проектируем, изготавливаем и устанавливаем световые панели</p>
-            <a href="" style="text-decoration: none;"><button class="getConsult">Получить консультацию ></button></a>
+            <a onclick="openModal()" style="text-decoration: none;"><button class="getConsult">Получить консультацию ></button></a>
         </div>
     </div>
     <div class="gradiENT">
         <div class="lightPanele">
             <div class="txt">
-                <h2>Виды световых <h2 style="color: #DEC313;">панелей</h2></h2>
+                <h2 id="pcPanel">Виды световых <h2 style="color: #DEC313;" id="pcPanel">панелей</h2></h2>
+                <div class="phonePanele"><h2>Виды световых <h2 style="color: #DEC313;">панелей</h2></h2></div>
                 <p>Выберите идеальное решение для вашего пространства.</p>
                 <div class="linee"></div>
             </div>
-            <div class="product">
+            <div class="product" id="pcc">
                 <img src="mamka/mono.webp" alt="">
                 <img src="mamka/cct.webp" alt="">
                 <img src="mamka/rgb.webp" alt="">
             </div>
+            <div class="product" id="siphone">
+                <button class="product-arrow product-prev" onclick="slideProduct(-1)">‹</button>
+
+                <div class="product-window">
+                    <img src="mamka/mono.webp" alt="" class="product-slide active">
+                    <img src="mamka/cct.webp" alt="" class="product-slide">
+                    <img src="mamka/rgb.webp" alt="" class="product-slide">
+                </div>
+
+                <div class="product-dots">
+                    <span class="product-dot active" onclick="goProduct(0)"></span>
+                    <span class="product-dot" onclick="goProduct(1)"></span>
+                    <span class="product-dot" onclick="goProduct(2)"></span>
+                </div>
+
+                <button class="product-arrow product-next" onclick="slideProduct(1)">›</button>
+            </div>
         </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="cardochkaLine1">
-        <div class="textusCard">
+    <div class="brbrPatapim"></div>
+    
+
+    <div class="cardochkaLine1" id="pcc">
+        <div class="textusCard" id="katalog">
             <h2>Комплектующие <h2 style="color: #DEC313;">для ваших задач</h2></h2>
             <p>Поставляем всё необходимое для реализации ваших проектов.</p>
         </div>
@@ -68,7 +108,7 @@
             </div>
         </div>
     </div>
-    <div class="otherCard">
+    <div class="otherCard" id="pcc">
         <div class="cards">
             <div class="card">
                 <img src="mamka/card/controller.webp" alt="">
@@ -89,16 +129,71 @@
         </div>
         <img src="mamka/lentaDecor.webp" alt="" class="decorLight" style="z-index: 1;">
     </div>
-    <button class="showMoree">Узнать больше ></button>
+    <a onclick="openModal()" id="pcc"><button class="showMoree">Узнать больше ></button></a>
+
+
+
+
+
+    <div class="cardochkaLine1" id="siphone">
+        <div class="textusCard" id="katalog">
+            <h2>Комплектующие <h2 style="color: #DEC313;">для ваших задач</h2></h2>
+            <p>Поставляем всё необходимое для реализации ваших проектов.</p>
+        </div>
+
+
+        <div class="cardLine">
+            <div class="card">
+                <img src="mamka/card/lenta.webp" alt="">
+                <p>Светодиодные ленты</p>
+            </div>
+            <div class="card">
+                <img src="mamka/card/pult.webp" alt="">
+                <p>Пульты</p>
+            </div>
+            <div class="card">
+                <img src="mamka/card/powerBlock.webp" alt="">
+                <p>Блоки питания</p>
+            </div>
+            <div class="card">
+                <img src="mamka/card/controller.webp" alt="">
+                <p>Контроллеры</p>
+            </div>
+            <div class="card">
+                <img src="mamka/card/dimmer.webp" alt="">
+                <p>Диммеры</p>
+            </div>
+            <div class="card">
+                <img src="mamka/card/sensor.webp" alt="">
+                <p>Датчики</p>
+            </div>
+
+
+
+
+        </div>
+        <div class="bottomBTN">
+            <div class="card">
+                <img src="mamka/card/alumProfile.webp" alt="">
+                <p>Алюминевые профили</p>
+            </div>
+            <div class="showMoreeBTN"><a onclick="openModal()">Узнать больше ></a></div>
+        </div>
+    </div>
+
+
+
+
+
     <br>
     <br>
-    <div class="usWork" style="z-index: 2;">
+    <div class="usWork" style="z-index: 2;" id="woork">
         <div class="usWorksAndPhotos">
             <div class="uwo">
                 <p>Наши</p>
                 <p style="color: #DEC313;">работы</p>
             </div>
-            <p class="abt">Каждый проект — индивидуальный подход, продуманный свет и качественное исполнение</p>
+            <p class="abt">Каждый проект — индивидуальный подход, продуманный свет и качественное исполнение.</p>
         </div>
         <div class="viewer">
             <button class="arrow" id="prev">‹</button>
@@ -121,7 +216,7 @@
     <br>
     <br>
     <div class="mrOtstup">
-        <div class="whyWee">
+        <div class="whyWee" id="whyweeb">
             <h2>Почему<h2 style="color: #DEC313;">Ярко34?</h2></h2>
             <p class="abot">Ярко34 — создаём современные световые решения, объединяя собственное производство, качественные материалы и профессиональный монтаж. Подбираем освещение с учётом особенностей каждого интерьера.</p>
         </div>
@@ -153,8 +248,8 @@
                 <p class="bombolelo">Подберём решение под ваш интерьер или проект.</p>
                 <br>
                 <div class="btns">
-                    <a href=""><button class="write">Написать</button></a>
-                    <a href=""><button class="call">Позвонить</button></a>
+                    <a href="@yarko34"><button class="write">Написать</button></a>
+                    <a href="tel:+79033727458"><button class="call">Позвонить</button></a>
                 </div>
                 <img src="mamka/sun.webp" alt="" class="sunny">
             </div>
@@ -164,19 +259,19 @@
     <br>
     <p class="central">Работаем  по  г.Волгоград  и  всей  Волгоградской области.</p>
     <p class="central">Адрес: г. Волгоград ул.Канунникова 5</p>
-    <div class="footer">
+    <div class="footer" id="contact">
         <div class="stolb1">
             <img src="mamka/logo.webp" alt="">
-            <a href="">+7  903 372 74 58</a>
-            <a href="">Telegram</a>
-            <a href="">Страница в VK</a>
+            <a href="tel:+79033727458">+7  903 372 74 58</a>
+            <a href="@yarko34">Telegram</a>
+            <a href="https://vk.ru/yarko34">Страница в VK</a>
         </div>
         <div class="stolb1">
             <h2>Навигация</h2>
-            <a href="">Каталог</a>
-            <a href="">Работы</a>
-            <a href="">Преимущества</a>
-            <a href="">Контакты</a>
+            <a href="#katalog">Каталог</a>
+            <a href="#woork">Работы</a>
+            <a href="#whyweeb">Преимущества</a>
+            <a href="#contact">Контакты</a>
         </div>
     </div>
     <a href="" class="policy">Политика конфиденциальности</a>
@@ -186,3 +281,43 @@
 </html>
 
 <script src="js/photos.js"></script>
+<script src="js/modal.js"></script>
+
+<!-- Модалка -->
+<div id="modal" onclick="if(event.target===this) closeModal()">
+  <div class="modal-box">
+    <a href="https://t.me/ваш_ник" target="_blank" class="btn tg">Telegram<i class="fa-brands fa-telegram"></i></a>
+    <a href="https://max.ru/ваш_ник" target="_blank" class="btn max">MAX<i class="fa-solid fa-comment-sms"></i></a>
+    <a href="tel:+79001234567" class="btn phone">Позвонить<i class="fa-solid fa-phone"></i></a>
+    <button onclick="closeModal()" class="close">Закрыть</button>
+  </div>
+</div>
+
+<script>
+let productIndex = 0;
+
+function updateProduct() {
+  const slides = document.querySelectorAll('.product-slide');
+  const dots = document.querySelectorAll('.product-dot');
+  const total = slides.length;
+
+  slides.forEach((s, i) => s.classList.toggle('active', i === productIndex));
+  dots.forEach((d, i) => d.classList.toggle('active', i === productIndex));
+
+  document.querySelector('.product-prev').disabled = productIndex === 0;
+  document.querySelector('.product-next').disabled = productIndex === total - 1;
+}
+
+function slideProduct(dir) {
+  const total = document.querySelectorAll('.product-slide').length;
+  productIndex += dir;
+  if (productIndex < 0) productIndex = 0;
+  if (productIndex > total - 1) productIndex = total - 1;
+  updateProduct();
+}
+
+function goProduct(i) {
+  productIndex = i;
+  updateProduct();
+}
+</script>

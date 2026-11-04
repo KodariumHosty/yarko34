@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*{
+    font-family: "Manrope", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease, visibility .3s ease;
+}
+#modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-box {
+  width: 50vw;        /* 50% ширины экрана */
+  height: 50vh;       /* 50% высоты экрана */
+  max-width: 90vw;
+  max-height: 90vh;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transform: scale(.9);
+  transition: transform .3s ease;
+}
+#modal.open .modal-box {
+  transform: scale(1);   /* плавное «выпрыгивание» */
+}
+
+.btn {
+  padding: 14px;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+}
+.tg    { background: #229ED9; transition: all 0.3s; }
+.max   { background: #6C5CE7; transition: all 0.3s; }
+.phone { background: #2ecc71; transition: all 0.3s; }
+
+.tg:hover    { background: #1a79a5; }
+.max:hover   { background: #473c96; }
+.phone:hover { background: #1b7742; }
+
+.close {
+  margin-top: auto;
+  padding: 10px;
+  border: none;
+  background: #eee;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.close:hover{
+    background: rgb(161, 161, 161);
+}
+
+.modal-box a{
+    font-size: 25px;
+}
+
+.fa-solid, .fa-brands{
+    margin-left: 20px;
+}
