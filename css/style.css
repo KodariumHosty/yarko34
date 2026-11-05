@@ -178,8 +178,15 @@ html, body{
     font-weight: 700;
 }
 
+
+.product{
+    display: flex;
+    gap: 20px;
+}
+
 .product img{
-    padding-right: 20px;
+    height: 85%;
+    /* border-radius: 50px; */
 }
 
 .linee{
@@ -551,6 +558,12 @@ html, body{
     padding-bottom: 100px;
 }
 
+@media (min-width: 769px) {
+    .product img{
+        width: 350px;
+    }
+}
+
 
 @media (max-width: 768px) {
     .naviBar{
@@ -670,7 +683,7 @@ html, body{
         font-size: 14px;
         font-weight: 700;
         width: 150px;
-        margin-top: 10px;
+        margin-top: 5px;
         margin-bottom: 20px;
     }
 
@@ -841,21 +854,25 @@ html, body{
     }
 
     .bottomBTN {
-    display: flex;
-    margin: 0 30px;
-    align-items: flex-end;
-    gap: 3px;
-}
+        display: flex;
+        margin: 0 30px;
+        align-items: flex-end;
+        gap: 3px;
+    }
 
-.showMoreeBTN {
-    display: inline-block;
-    border: 2px solid #DEC313;
-    font-size: 15px;
-    padding: 5px 12px;
-    border-radius: 50px;
-    transition: all 0.3s;
-    margin-bottom: 8px;
-}
+    .alPro{
+        padding-bottom: 20px;
+    }
+
+    .showMoreeBTN {
+        display: inline-block;
+        border: 2px solid #DEC313;
+        font-size: 15px;
+        padding: 5px 12px;
+        border-radius: 50px;
+        transition: all 0.3s;
+        margin-bottom: 8px;
+    }
 
 
     .uwo p, .uwoClone p{
