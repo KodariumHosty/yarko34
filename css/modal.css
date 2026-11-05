@@ -9,7 +9,7 @@
 #modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.5);
+  background: rgba(0, 0, 0, 0.601);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,10 +31,9 @@
 
 .modal-box {
   width: 50vw;        /* 50% ширины экрана */
-  height: 50vh;       /* 50% высоты экрана */
   max-width: 90vw;
   max-height: 90vh;
-  background: #fff;
+  background: #7b7b7b;
   border-radius: 12px;
   padding: 24px;
   box-sizing: border-box;
@@ -56,13 +55,13 @@
   text-decoration: none;
   font-weight: 600;
 }
-.tg    { background: #229ED9; transition: all 0.3s; }
-.max   { background: #6C5CE7; transition: all 0.3s; }
-.phone { background: #2ecc71; transition: all 0.3s; }
+.tg    { background: #ffffff; color: black; transition: all 0.3s; }
+.max   { background: #ffffff; color: black; transition: all 0.3s; }
+.phone { background: #FAD003; color: black; transition: all 0.3s; }
 
-.tg:hover    { background: #1a79a5; }
-.max:hover   { background: #473c96; }
-.phone:hover { background: #1b7742; }
+.tg:hover    { background: #e2e2e2; }
+.max:hover   { background: #e2e2e2; }
+.phone:hover { background: #b29c11; }
 
 .close {
   position: absolute;
@@ -104,15 +103,7 @@
     height: 50vh;       /* 50% высоты экрана */
     max-width: 90vw;
     max-height: 90vh;
-    background: #fff;
-    border-radius: 12px;
-    padding: 24px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
     gap: 12px;
-    transform: scale(.9);
-    transition: transform .3s ease;
   }
 
 }
