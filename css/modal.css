@@ -100,7 +100,6 @@
     
   .modal-box {
     width: 90%;        /* 50% ширины экрана */
-    height: 50vh;       /* 50% высоты экрана */
     max-width: 90vw;
     max-height: 90vh;
     gap: 12px;
