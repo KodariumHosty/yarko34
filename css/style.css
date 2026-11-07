@@ -101,7 +101,7 @@ html, body{
 .contentBoxBanner{
     width: 900px;
     position: absolute;
-    top: 30%;
+    top: 25%;
     padding: 0 100px;
 }
 
@@ -126,11 +126,39 @@ html, body{
 
 }
 
+.getConsult {
+  position: relative;
+  overflow: hidden;
+}
+
+.getConsult::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -150%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  animation: shine 2s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  0%   { left: -150%; }
+  100% { left: 150%; }
+}
+
 
 .getConsult{
     margin-top: 50px;
     background-color: #F3D61F;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 700;
 
     color: black;
@@ -616,7 +644,7 @@ html, body{
     .contentBoxBanner{
         position: absolute;
         width: 350px;
-        top: 25%;
+        top: 20%;
         padding: 0 30px;
     }
 
@@ -665,7 +693,7 @@ html, body{
 
 
     .getConsult{
-        font-size: 15px;
+        font-size: 17px;
         position: absolute;
         z-index: 100;
         font-weight: 700;
