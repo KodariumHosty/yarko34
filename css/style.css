@@ -218,7 +218,7 @@ html, body{
 
 .cardLine{display: flex;}
 
-.card img{width: 120px;}
+.card img{width: 120px; }
 
 .card{
     margin-right: 20px;
