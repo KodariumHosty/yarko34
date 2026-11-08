@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mono-ярко</title>
+    <link rel="stylesheet" href="css/addonList.css">
+    <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+    <div class="naviBar">
+        <img src="mamka/logo.webp" alt="">
+        <div class="selfer">
+            <a href="#katalog">Каталог</a>
+            <a href="#woork">Работы</a>
+            <a href="#whyweeb">Преимущества</a>
+            <a href="#contact">Контакты</a>
+        </div>
+        <a onclick="openModal()" style="text-decoration: none;"><button class="svaz"><p>Связаться</p><img src="mamka/telega.webp" alt=""></button></a>
+    </div>
+
+    <div class="naviPhone">
+        <img src="mamka/logo.webp" alt="">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <a onclick="openModal()" style="text-decoration: none;"><button class="svaz"><p>Связаться</p><img src="mamka/telega.webp" alt=""></button></a>
+            <button class="burger" onclick="document.getElementById('m').classList.add('open')">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+    <div id="m" onclick="if(event.target===this) this.classList.remove('open')">
+        <div class="menu">
+            <span class="x" onclick="document.getElementById('m').classList.remove('open')">✕</span>
+            <a href="#katalog">Каталог</a>
+            <a href="#woork">Работы</a>
+            <a href="#whyweeb">Преимущества</a>
+            <a href="#contact">Контакты</a>
+        </div>
+    </div>
+
+
+
+
+    <div class="paddington">
+        <a href="index.html"><button class="btnBack"><-</button></a>
+        <h1>Mono</h1>
+        <p class="opiska">Световые панели с поддержкой RGB, RGB+W и RGB+CCT. Управляйте цветами, яркостью и оттенками белого, создавая уникальную атмосферу в помещении.</p>
+        <p class="kilolumen">4000K</p>
+
+        <div class="photos">
+            <img src="mamka/work/rgb/1.webp" alt="">
+            <img src="mamka/work/rgb/2.webp" alt="">
+            <img src="mamka/work/rgb/3.webp" alt="">
+
+            <img src="mamka/work/rgb/4.webp" alt="">
+            <img src="mamka/work/rgb/5.webp" alt="">
+            <img src="mamka/work/rgb/6.webp" alt="">
+        </div>
+
+</body>
+</html>
+
+
+<script>
+document.addEventListener('click', e => {
+  if (e.target.tagName !== 'IMG' || !e.target.closest('.photos')) return;
+  const ov = document.createElement('div');
+  ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.9);display:flex;align-items:center;justify-content:center;z-index:9999;cursor:zoom-out';
+  const big = document.createElement('img');
+  big.src = e.target.src;
+  big.style.cssText = 'max-width:100vw;max-height:100vh';
+  ov.appendChild(big);
+  ov.onclick = () => ov.remove();
+  document.body.appendChild(ov);
+});
+</script>

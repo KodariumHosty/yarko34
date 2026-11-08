@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+html, body{
+    overflow-x: hidden;
+    background-color: #F4F4F6;
+    scroll-behavior: smooth;
+    touch-action: manipulation;
+}
+
+*{
+    font-family: "Manrope", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.paddington{
+    padding: 40px 100px;
+}
+
+.btnBack{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 50px;
+}
+
+
+img{
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 33%;
+}
+
+img:hover{
+    transform: scale(1.03);
+}
+
+video{
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 33%;
+}
+
+h1{
+    font-size: 60px;
+}
+
+
+.opiska{
+    font-size: 25px;
+    font-weight: 600;
+    width: 600px;
+}
+
+
+.kilolumen{
+    font-size: 36px;
+    font-weight: 600;
+    text-decoration: underline #DEC313;
+    margin: 50px 0;
+}
+
+
+
+@media (max-width: 768px) {
+    .paddington{
+        padding: 40px 20px;
+    }
+
+    .btnBack{
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        border-radius: 50px;
+        color: black;
+    }
+
+
+    img{
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s;
+        width: 49%;
+    }
+
+    img:hover{
+        transform: scale(1.03);
+    }
+
+    h1{
+        margin-top: 20px;
+        font-size: 30px;
+    }
+
+    .opiska{
+        font-size: 15px;
+        width: 300px;
+    }
+
+
+    .kilolumen{
+        font-size: 25px;
+        font-weight: 600;
+        text-decoration: underline #DEC313;
+        margin: 20px 0;
+    }
+
+    video{
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s;
+        width: 100%;
+        background-color: rgb(208, 208, 208);
+    }
+}

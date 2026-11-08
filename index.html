@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/photoMaker.css">
     <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Ярко</title>
 </head>
@@ -31,13 +32,13 @@
         </div>
     </div>
     <div id="m" onclick="if(event.target===this) this.classList.remove('open')">
-    <div class="menu">
-        <span class="x" onclick="document.getElementById('m').classList.remove('open')">✕</span>
-        <a href="#katalog">Каталог</a>
-        <a href="#woork">Работы</a>
-        <a href="#whyweeb">Преимущества</a>
-        <a href="#contact">Контакты</a>
-    </div>
+        <div class="menu">
+            <span class="x" onclick="document.getElementById('m').classList.remove('open')">✕</span>
+            <a href="#katalog">Каталог</a>
+            <a href="#woork">Работы</a>
+            <a href="#whyweeb">Преимущества</a>
+            <a href="#contact">Контакты</a>
+        </div>
     </div>
 
 
@@ -70,17 +71,19 @@
                 <div class="linee"></div>
             </div>
             <div class="product" id="pcc">
-                <img src="mamka/mono.webp" alt="">
-                <img src="mamka/cct.webp" alt="">
-                <img src="mamka/rgb.webp" alt="">
+                <a href="mono.html" class="btsM">
+                    <img id="imagaBTSM" src="mamka/mono.webp" alt="">
+                </a>
+                <a href="cct.html"><img id="imagaBTSM1" src="mamka/cct.webp" alt=""></a>
+                <a href="rgb.html"><img id="imagaBTSM2" src="mamka/rgb.webp" alt=""></a>
             </div>
             <div class="product" id="siphone">
                 <button class="product-arrow product-prev" onclick="slideProduct(-1)">‹</button>
 
                 <div class="product-window">
-                    <img src="mamka/mono.webp" alt="" class="product-slide active">
-                    <img src="mamka/cct.webp" alt="" class="product-slide">
-                    <img src="mamka/rgb.webp" alt="" class="product-slide">
+                    <a href="mono.html"><img src="mamka/mono.webp" alt="" class="product-slide active"></a>
+                    <a href="cct.html"><img src="mamka/cct.webp" alt="" class="product-slide"></a>
+                    <a href="rgb.html"><img src="mamka/rgb.webp" alt="" class="product-slide"></a>
                 </div>
 
                 <div class="product-dots">
@@ -128,14 +131,6 @@
                 <img src="mamka/card/dimmer.webp" alt="">
                 <p>Диммеры</p>
             </div>
-            <div class="card">
-                <img src="mamka/card/sensor.webp" alt="">
-                <p>Датчики</p>
-            </div>
-            <div class="card">
-                <img src="mamka/card/alumProfile.webp" alt="">
-                <p>Алюминевые профили</p>
-            </div>
         </div>
         <img src="mamka/lentaDecor.webp" alt="" class="decorLight" style="z-index: 1;">
     </div>
@@ -169,14 +164,6 @@
                 <img src="mamka/card/controller.webp" alt="">
                 <p>Контроллеры</p>
             </div>
-            <div class="card">
-                <img src="mamka/card/dimmer.webp" alt="">
-                <p>Диммеры</p>
-            </div>
-            <div class="card">
-                <img src="mamka/card/sensor.webp" alt="">
-                <p>Датчики</p>
-            </div>
 
 
 
@@ -184,8 +171,8 @@
         </div>
         <div class="bottomBTN">
             <div class="card">
-                <img src="mamka/card/alumProfile.webp" alt="">
-                <p class="alPro">Алюминиевые профили</p>
+                <img src="mamka/card/dimmer.webp" alt="">
+                <p class="alPro">Диммеры</p>
             </div>
             <div class="showMoreeBTN"><a onclick="openModal()">Узнать больше ></a></div>
         </div>

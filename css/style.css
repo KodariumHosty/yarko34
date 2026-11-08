@@ -13,62 +13,6 @@ html, body{
     padding: 0;
 }
 
-.selfer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 25px;
-}
-
-.selfer a{
-    font-size: 24px;
-    font-weight: 700;
-    color: black;
-    text-decoration: none;
-    display: block;
-    box-sizing: border-box;
-    transition: all 0.3s;
-}
-
-.selfer a:hover{
-    color: #958419;
-}
-
-.naviBar{
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 100px;
-}
-
-.naviBar img{
-    width: 150px;
-}
-
-.svaz{
-    background-color: #F3D61F;
-    color: black;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    font-size: 20px;
-    font-weight: 700;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 50px;
-    transition: all 0.3s;
-    cursor: pointer;
-}
-
-.svaz:hover{
-    background-color: #d5bd1c;
-}
-
-.svaz img{
-    width: 30px;
-}
-
 .bnr{
     width: 100%;
     display: block;
@@ -561,50 +505,6 @@ html, body{
     display: block;
 }
 
-
-.burger {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding: 8px;
-}
-.burger span {
-  display: block; width: 28px; height: 3px;
-  background: #222; border-radius: 2px;
-}
-
-#m {
-  position: fixed; inset: 0; background: rgba(0,0,0,.5);
-  display: flex; justify-content: flex-end; z-index: 999;
-  opacity: 0; visibility: hidden; transition: .3s;
-}
-#m.open { opacity: 1; visibility: visible; }
-
-.menu {
-  width: 70%; max-width: 300px; height: 100%;
-  background: #fff; padding: 20px; box-sizing: border-box;
-  display: flex; flex-direction: column; gap: 16px;
-  transform: translateX(100%); transition: transform .3s;
-}
-#m.open .menu { transform: translateX(0); }
-
-.menu a { text-decoration: none; color: #222; font-size: 20px; }
-.x { align-self: flex-end; font-size: 28px; cursor: pointer; }
-
-.naviPhone{
-    display: none;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3px 30px;
-}
-
-.bugaga{
-    font-size: 30px;
-}
-
 #siphone{
     display: none;
 }
@@ -620,6 +520,31 @@ html, body{
 .brbrPatapim{
     padding-bottom: 100px;
 }
+
+
+
+.product {
+    display: flex;
+    gap: 20px;
+}
+
+
+#imagaBTSM, #imagaBTSM1, #imagaBTSM2 {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+}
+
+
+.product a{
+    transition: all 0.3s;
+}
+
+.product a:hover{
+    transform: scale(1.02);
+}
+
 
 @media (min-width: 769px) {
     .product img{
@@ -648,15 +573,8 @@ html, body{
 
 
 @media (max-width: 768px) {
-    .naviBar{
-        display: none;
-    }
     #productMob{
         display: block;
-    }
-    .naviPhone{
-        display: flex;
-
     }
     .phonePanele{
         display: flex;
@@ -664,22 +582,6 @@ html, body{
 
     #pcPanel{
         display: none;
-    }
-    .naviPhone img{
-        width: 80px;
-        height: 40px;
-    }
-    .svaz{
-        gap: 5px;
-        font-size: 15px;
-        font-weight: 700;
-        padding: 5px 30px;
-        border-radius: 50px;
-    }
-
-    .svaz img{
-        width: 15px;
-        height: 15px;
     }
     #siphone{
         display: block;
@@ -690,7 +592,7 @@ html, body{
     .contentBoxBanner{
         position: absolute;
         width: 350px;
-        top: 30%;
+        top: 35%;
         padding: 0 30px;
     }
 
